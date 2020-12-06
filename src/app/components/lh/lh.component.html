@@ -1,0 +1,11 @@
+
+<mat-list>
+    <div mat-subheader class="top-padding">Users</div>
+    <mat-list-item *ngFor="let user of users">
+      <mat-icon mat-list-icon>account_circle</mat-icon>
+      <div mat-line>{{user.email}}></div>
+      <div mat-line> <a>Account id: </a>{{user.accountId}} <button (click)="moveToPrediction(user)" class="btn-block">Predict</button></div>
+      <div mat-line> <a>User id: </a>{{user._id}} </div>
+    </mat-list-item>
+    
+  </mat-list>

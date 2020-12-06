@@ -1,0 +1,35 @@
+<div class="padding-top">
+    <a>Prediction of the user's location</a>
+    <h1></h1>
+    <mat-form-field>
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker"
+        [(ngModel)]="myModel.date">
+        <mat-datepicker-toggle matSuffix [for]="picker">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+</div>
+<div class="md-form" class="padding">
+  <input 
+    type="time"
+    id="input"
+    class="form-control"
+    value="00:00"
+    [(ngModel)]="myModel.hhmm"
+  />
+  <label for="input"></label>
+</div>
+
+<button class="padding" mat-button (click)="Save()" color="primary">Save</button>
+<button class="padding" mat-button (click)="getPrediction();" color="primary">Predict</button> <!--moveToMap()-->
+
+<!--<mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="roomsFilter.date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker [(ngModel)]="roomsFilter.date" ngDefaultControl (selectedChanged)="onDate($event)"></mat-datepicker>
+</mat-form-field>
+-->
+
+

@@ -1,0 +1,31 @@
+<!-- map.component.html -->
+<div class="padding">
+    <p>Location of michaelkushnir123233@gmail.com:</p>
+</div>
+<agm-map [latitude]="location.latitude" [longitude]="location.longitude" [zoom]="location.zoom">
+    <agm-marker *ngFor="let data of marker" 
+    [latitude]="data.lat" 
+    [longitude]="data.lng"
+    (markerClick)="selectMarker(data)">
+    </agm-marker>
+    <agm-circle *ngFor="let data of circle"
+        [latitude]="data.lat" 
+        [longitude]="data.lng" [clickable]="false" 
+        [draggable]="false" 
+        [editable]="false" 
+        [fillColor]="data.fillColor" 
+        [fillOpacity]="data.fillOpacity" 
+        [radius]="data.radius">
+    </agm-circle>
+</agm-map>
+
+<a mat-button (click)="f1();getCountryName()">Position 1</a>
+<a mat-button (click)="f2();getCountryName()">Position 2</a>
+<a mat-button (click)="f3()">Position 3</a>
+
+<div>Selected Marker:
+    <h1>latitude: {{selectedMarker.lat}}</h1>
+    <h1>longitude: {{selectedMarker.lng}}</h1>
+    <h1>confidence: {{selectedMarker.confidence}}%</h1>
+    <h1>Address: Mahal St 45, Tel Aviv-Yafo, Israel</h1>
+</div>

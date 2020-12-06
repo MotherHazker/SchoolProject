@@ -1,0 +1,21 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<mat-toolbar color="primary" class="app-header">
+ 
+  <span class="nav-tool-items">
+    <a mat-button routerLink="login" routerLinkActive="active">Log in</a>
+    <a mat-button routerLink="register" routerLinkActive="active">Register</a>
+    <a mat-button routerLink="location_history" routerLinkActive="active">Location history</a>
+    <a mat-button routerLink="about" routerLinkActive="active">About</a>
+    <a mat-button (click)="logOut()">Log out</a>
+  </span>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

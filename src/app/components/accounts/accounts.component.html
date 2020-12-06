@@ -1,0 +1,11 @@
+
+<mat-list>
+    <div mat-subheader class="top-padding">Accounts</div>
+    <mat-list-item *ngFor="let account of accounts">
+      <mat-icon mat-list-icon>account_circle</mat-icon>
+      <div mat-line>{{account.name}}</div>
+      <div mat-line> {{account.email}} </div>
+      <div mat-line> {{account._id}} </div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>

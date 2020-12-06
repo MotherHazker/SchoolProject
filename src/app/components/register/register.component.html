@@ -1,0 +1,31 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Register</mat-card-title>
+    </mat-card-header>
+    
+      <mat-card-content>
+        
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Name" [(ngModel)]="Account.name" >
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Description" [(ngModel)]="Account.description">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" [(ngModel)]="Account.email">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" [(ngModel)]="Account.password">
+        </mat-form-field>
+
+
+      </mat-card-content>
+
+      <button (click)="addUser()" mat-stroked-button color="black" class="btn-block">Create Account</button>
+
+  </mat-card>
+</div>
