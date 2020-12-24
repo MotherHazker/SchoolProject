@@ -66,7 +66,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     HammerModule,
     GoogleMapsModule,
     AgmCoreModule.forRoot({
-      apiKey: "AIzaSyCxOseC_M_a0uh4DtIGe1-391FUwt9z8C8",
+      apiKey: "Place your key here",
       libraries: ["places", "geometry"]
       /* apiKey is required, for google maps API use */
   })
